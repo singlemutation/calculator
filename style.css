@@ -15,7 +15,7 @@
 }
 
 .buttons {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     max-width: 450px;
     height: 500px;
@@ -36,4 +36,17 @@
     margin: 5px;
     height: 80px;
     width: 80px;
+    font-size: x-large;
+}
+
+.ops {
+    background-color: orange;
+}
+
+.display {
+    padding: 5px;
+    font-size: xx-large;
+    text-align: end;
+    padding-right: 20px;
+    padding-top: 20px;
 }
