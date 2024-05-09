@@ -1,0 +1,39 @@
+.container {
+    border: 1px solid black;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.display {
+    border: 1px solid black;
+    max-width: 450px;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    border: 1px solid black;
+    display: flex;
+    max-width: 450px;
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.button {
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 5px;
+    height: 80px;
+    width: 80px;
+}
