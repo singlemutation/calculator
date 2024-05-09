@@ -45,8 +45,14 @@
 
 .display {
     padding: 5px;
-    font-size: xx-large;
+    font-size: 60px;
     text-align: end;
     padding-right: 20px;
     padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.zero {
+    width: 185px;
+    box-sizing: border-box;
 }
