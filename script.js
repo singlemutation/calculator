@@ -23,7 +23,7 @@ let operate = function(operator, firstNumber, secondNumber) {
         return add(firstNumber, secondNumber);
     } if (operator === '-') {
         return subtract(firstNumber, secondNumber);
-    } if (operator === '*') {
+    } if (operator === 'x') {
         return multiply(firstNumber, secondNumber);
     } if (operator === '/') {
         return divide(firstNumber, secondNumber);
@@ -41,7 +41,7 @@ const buttons = document.querySelectorAll(".input");
     });
 
 const equals = document.querySelector(".equals");
-// equals.addEventListener("click", () => operate())
+equals.addEventListener("click", () => operate())
 
 const clear = document.querySelector(".clear");
 clear.addEventListener("click", () => {
