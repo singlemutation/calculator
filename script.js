@@ -30,11 +30,21 @@ let operate = function(operator, firstNumber, secondNumber) {
     }
 }
 
-const buttons = document.querySelectorAll(".input");
-buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-        display.textContent += button.textContent
-    });
-});
-
 const display = document.querySelector(".display")
+const buttons = document.querySelectorAll(".input");
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            display.textContent += button.textContent;
+            let displayContent = display.textContent;
+            return displayContent;
+        });
+    });
+
+const equals = document.querySelector(".equals");
+// equals.addEventListener("click", () => operate())
+
+const clear = document.querySelector(".clear");
+clear.addEventListener("click", () => {
+    display.textContent = ''
+    displayContent = display.textContent;
+})
