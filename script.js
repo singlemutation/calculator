@@ -1,5 +1,5 @@
 let add = function(a, b) {
-    return (a + b);
+    return (parseInt(a) + parseInt(b));
 }
 
 let subtract = function(a, b) {
@@ -51,10 +51,27 @@ const buttons = document.querySelectorAll(".input");
               let displayArr = displayContent.split('x')
               let product = multiply(displayArr[0], displayArr[1])
               display.textContent = product
-            }
+            } if (displayContent.includes('+')) {
+                let displayArr = displayContent.split('+')
+                let sum = add(displayArr[0], displayArr[1])
+                display.textContent = sum
+            } if (displayContent.includes('-')) {
+                let displayArr = displayContent.split('-')
+                let sum = subtract(displayArr[0], displayArr[1])
+                display.textContent = sum
+            } if (displayContent.includes('/')) {
+                let displayArr = displayContent.split('/')
+                let product = divide(displayArr[0], displayArr[1])
+                if (displayArr[1] === '0') {
+                display.textContent = 'GTFO'
+                return;
+                } else display.textContent = parseFloat(product.toFixed(6))
+            } 
             })
         });
     });
+
+
 
 
 
