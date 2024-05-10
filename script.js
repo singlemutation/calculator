@@ -36,15 +36,29 @@ const buttons = document.querySelectorAll(".input");
         button.addEventListener("click", () => {
             display.textContent += button.textContent;
             let displayContent = display.textContent;
-            return displayContent;
+            console.log(displayContent)
+            console.log(typeof displayContent)
+
+            const clear = document.querySelector(".clear");
+            clear.addEventListener("click", () => {
+            display.textContent = ''
+            displayContent = display.textContent;
+            })
+            
+            const equals = document.querySelector(".equals");
+            equals.addEventListener("click", () => {
+             if (displayContent.includes('x')) {
+              let displayArr = displayContent.split('x')
+              let product = multiply(displayArr[0], displayArr[1])
+              display.textContent = product
+            }
+            })
         });
     });
 
-const equals = document.querySelector(".equals");
-equals.addEventListener("click", () => operate())
 
-const clear = document.querySelector(".clear");
-clear.addEventListener("click", () => {
-    display.textContent = ''
-    displayContent = display.textContent;
-})
+
+
+
+
+// split string with operator as separator
